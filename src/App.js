@@ -42,7 +42,7 @@ function App() {
     const accessKey = process.env.REACT_APP_ACCESSKEY;
 
     axios
-      .get(`${apiRoot}/photos/random?client_id=${accessKey}&count=$10`)
+      .get(`${apiRoot}/photos/random?client_id=${accessKey}&count=10`)
       .then(res => {
         setImage([...images, ...res.data]);
       })
